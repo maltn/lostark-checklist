@@ -5,25 +5,25 @@ import List from "../components/List";
 
 const Home: NextPage = () => {
   return (
-    <div className="relative flex flex-col h-auto p-8 m-auto mt-8 border rounded-md shadow-xl bg-custom-dark w-272 border-custom-lighter">
+    <div className="relative flex flex-col h-auto p-8 m-auto mt-8 border rounded shadow-xl bg-custom-dark w-272 border-custom-lighter">
       <Clock className="block m-auto text-center text-white text-7xl w-160" />
       {/* <div className="w-1/2 m-auto text-center bg-red-500">
         dioawjdijawjdwai
       </div> */}
-      <div className="w-full">
+      <Characters />
+
+      <div className="w-full mb-4">
         <span className="block float-left w-1/2 m-auto text-4xl text-center text-white opacity-30">
           Weekly
         </span>
-        <span className="block float-right w-1/2 m-auto text-4xl text-center text-white opacity-30">
+        <span className="block float-right w-1/2 m-auto text-4xl text-center text-white">
           Daily
         </span>
       </div>
 
-      <Characters />
-
       <div>
-        <List title="Weekly" />
-        <List title="Daily" />
+        <List />
+        <List />
       </div>
     </div>
   );

@@ -10,7 +10,7 @@ const Clock = ({ className }: props) => {
   const [time, setTime] = useState(moment());
   const nextDailyReset = moment()
     .utc()
-    .set({ d: moment().day() + 2, h: 10, m: 0, s: 0, ms: 0 });
+    .set({ d: moment().day() + 1, h: 10, m: 0, s: 0, ms: 0 });
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -33,7 +33,7 @@ const Clock = ({ className }: props) => {
 
     return (
       <React.Fragment>
-        <span className="opacity-40">{days}d</span> {hours}h {minutes}m{" "}
+        <span className="opacity-30">{days}d</span> {hours}h {minutes}m{" "}
         {seconds}s
       </React.Fragment>
     );
