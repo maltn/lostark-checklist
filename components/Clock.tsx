@@ -10,7 +10,13 @@ const Clock = ({ className }: props) => {
   const [time, setTime] = useState(moment());
   const nextDailyReset = moment()
     .utc()
-    .set({ d: moment().day() + 1, h: 10, m: 0, s: 0, ms: 0 });
+    .set({
+      d: moment().day() + (11 - (moment().day() % 7)),
+      h: 10,
+      m: 0,
+      s: 0,
+      ms: 0,
+    });
 
   useEffect(() => {
     const timer = setInterval(() => {
